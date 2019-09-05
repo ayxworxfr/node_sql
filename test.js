@@ -1,7 +1,7 @@
 const DB = require('./utils/mysql');
-const db = new DB('aa');
+const db = new DB('user');
 
-let promise = db.queryStr('SELECT COUNT(*) FROM taotao.user');
+let promise = db.queryStr('SELECT COUNT(*) FROM user');
 promise.then(function (data) {
   //then第一个函数是成功的回调，参数是resolve(err)中的data
   console.log('成功：' + data); // 若成功，运行结果：成功：111
@@ -15,7 +15,7 @@ promise.then(function (data) {
 })
 
 // query
-// promise = db.queryStr('SELECT * FROM taotao.user');
+// promise = db.queryStr('SELECT * FROM user');
 // promise.then(function (data) {
 //   //then第一个函数是成功的回调，参数是resolve(err)中的data
 //   console.log('成功：' + data); // 若成功，运行结果：成功：111
